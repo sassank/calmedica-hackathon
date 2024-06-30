@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Patient {
+  id          String     @id @default(cuid())
+  ppi         String
+  firstName   String
+  lastName    String
+  phoneNumber String
+  exchanges   Exchange[]
+}
+
+model Exchange {
+  id            String         @id @default(cuid())
+  date          DateTime
+  type          ExchangeType
+  status        ExchangeStatus
+  body          String
+  transcription String?
+  category      String
+  summary       String
+  keywords      String
+
+  patientId String
+  patient   Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+}
+
+enum ExchangeType {
+  SMS
+  CALL
+}
+
+enum ExchangeStatus {
+  RED
+  YELLOW
+  BLUE
+  GREEN
+  GRAY
+}
