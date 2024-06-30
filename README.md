@@ -3,7 +3,7 @@
     <img 
       src="https://www.calmedica.com/wp-content/uploads/2020/05/Calmedica-logo-flat-200.png"
       alt="calmedica-logo" 
-      height="100" />
+      height="50" />
   </a>
   <h3 align="center">Hackathon 2024 - Calmedica</h3>
   <h2 align="center">Plateforme de transcription audio des patients</h2>
