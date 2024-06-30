@@ -38,4 +38,4 @@ cd calmedica-hackathon
 npm install
 npm run dev
 ```
-Il faudra ajouter vos identifiants 'OPENAI_API_KEY' pour l'ultilisation de OpenAI dans le fichier .env à la racine du projet.
+Ne pas oublier d'ajoutez vos propre identifiants 'OPENAI_API_KEY' pour l'utilisation de OpenAI dans le fichier .env à la racine du projet.
